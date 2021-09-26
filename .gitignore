@@ -1,0 +1,12 @@
+# Ignore everything!
+*
+
+# Not you.
+!.gitignore
+
+# Not code snippets.
+!User/snippets/*.json
+
+# This is required for some reason...
+# https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files#comment11620636_987162
+!*/
