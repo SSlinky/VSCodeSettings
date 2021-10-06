@@ -18,7 +18,8 @@
 		"body": [
 			"Private m${1:PropertyName} As ${2:PropertyType}",
 			"Public Property Let $1(var As $2)",
-			"    m$1 = var",
+			"Attribute $1.VB_Description = \"${3:Description attribute}.\"",
+				"    m$1 = var",
 			"End Property",
 			"",
 			"Public Property Get $1() As $2",
@@ -35,7 +36,8 @@
 		"body": [
 			"Private m${1:PropertyName} As ${2:PropertyType}",
 			"Public Property Set $1(var As $2)",
-			"    Set m$1 = var",
+			"Attribute $1.VB_Description = \"${3:Description attribute}.\"",
+				"    Set m$1 = var",
 			"End Property",
 			"",
 			"Public Property Get $1() As $2",
@@ -46,12 +48,13 @@
 		]
 	},
 
-	"Sub": {
+	"Subroutine": {
 		"prefix": "sub",
 		"description": "Subroutine",
 		"body": [
 			"${1:Public }Sub ${2:Identifier}($3)",
-			"'   ${4:Dosctring}",
+			"Attribute $1.VB_Description = \"${3:Description attribute}.\"",
+				"'   ${4:Dosctring}",
 			"'",
 			"'   Args:",
 			"'       param1:",
@@ -68,7 +71,8 @@
 		"description": "Subroutine",
 		"body": [
 			"${1:Public }Function ${2:Identifier}($3) As $4",
-			"'   ${5:Dosctring}",
+			"Attribute $1.VB_Description = \"${3:Description attribute}.\"",
+				"'   ${5:Dosctring}",
 			"'",
 			"'   Args:",
 			"'       param1:",
