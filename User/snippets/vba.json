@@ -53,8 +53,8 @@
 		"description": "Subroutine",
 		"body": [
 			"${1:Public }Sub ${2:Identifier}($3)",
-			"Attribute $1.VB_Description = \"${3:Description attribute}.\"",
-				"'   ${4:Dosctring}",
+			"Attribute $2.VB_Description = \"${4:Description attribute}.\"",
+				"'   ${5:Dosctring}",
 			"'",
 			"'   Args:",
 			"'       param1:",
@@ -71,8 +71,8 @@
 		"description": "Subroutine",
 		"body": [
 			"${1:Public }Function ${2:Identifier}($3) As $4",
-			"Attribute $1.VB_Description = \"${3:Description attribute}.\"",
-				"'   ${5:Dosctring}",
+			"Attribute $2.VB_Description = \"${5:Description attribute}.\"",
+				"'   ${6:Dosctring}",
 			"'",
 			"'   Args:",
 			"'       param1:",
