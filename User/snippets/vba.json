@@ -41,7 +41,7 @@
 			"End Property",
 			"",
 			"Public Property Get $1() As $2",
-			"    Set $1 = m$1",
+				"    Set $1 = m$1",
 			"End Property",
 			"",
 			"$0"
@@ -54,7 +54,7 @@
 		"body": [
 			"${1:Public }Sub ${2:Identifier}($3)",
 			"Attribute $2.VB_Description = \"${4:Dosctring}.\"",
-				"'   $4",
+				"'   $4.",
 			"'",
 			"'   Args:",
 			"'       param1:",
@@ -72,7 +72,7 @@
 		"body": [
 			"${1:Public }Function ${2:Identifier}($3) As $4",
 			"Attribute $2.VB_Description = \"${5:Dosctring}.\"",
-				"'   $5",
+				"'   $5.",
 			"'",
 			"'   Args:",
 			"'       param1:",
