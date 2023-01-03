@@ -19,7 +19,7 @@
 			"Private m${1:PropertyName} As ${2:PropertyType}",
 			"Public Property Let $1(var As $2)",
 			"Attribute $1.VB_Description = \"${3:Dosctring}.\"",
-				"    m$1 = var",
+			"    m$1 = var",
 			"End Property",
 			"",
 			"Public Property Get $1() As $2",
@@ -29,7 +29,6 @@
 			"$0"
 		]
 	},
-
 	"Public Property Set": {
 		"prefix": "propset",
 		"description": "Property set and get with backing store",
@@ -37,24 +36,23 @@
 			"Private m${1:PropertyName} As ${2:PropertyType}",
 			"Public Property Set $1(var As $2)",
 			"Attribute $1.VB_Description = \"${3:Dosctring}.\"",
-				"    Set m$1 = var",
+			"    Set m$1 = var",
 			"End Property",
 			"",
 			"Public Property Get $1() As $2",
-				"    Set $1 = m$1",
+			"    Set $1 = m$1",
 			"End Property",
 			"",
 			"$0"
 		]
 	},
-
 	"Subroutine": {
 		"prefix": "sub",
 		"description": "Subroutine",
 		"body": [
 			"${1:Public }Sub ${2:Identifier}($3)",
 			"Attribute $2.VB_Description = \"${4:Dosctring}.\"",
-				"'   $4.",
+			"'   $4.",
 			"'",
 			"'   Args:",
 			"'       param1:",
@@ -65,14 +63,13 @@
 			"End Sub"
 		]
 	},
-
 	"Function": {
 		"prefix": "func",
 		"description": "Subroutine",
 		"body": [
 			"${1:Public }Function ${2:Identifier}($3) As $4",
 			"Attribute $2.VB_Description = \"${5:Dosctring}.\"",
-				"'   $5.",
+			"'   $5.",
 			"'",
 			"'   Args:",
 			"'       param1:",
@@ -85,7 +82,6 @@
 			"End Function"
 		]
 	},
-
 	"Constructor": {
 		"prefix": "init",
 		"description": "Class_Initialize",
@@ -95,7 +91,6 @@
 			"End Sub"
 		]
 	},
-
 	"Base Class Template": {
 		"prefix": "class",
 		"description": "Basic class",
@@ -114,6 +109,12 @@
 			"'-------------------------------------------------------------------------------",
 			"'   Class: $1",
 			"'   ${2:Class description goes here}",
+			"'-------------------------------------------------------------------------------",
+			"",
+			"' Enums",
+			"'-------------------------------------------------------------------------------",
+			"",
+			"' Events",
 			"'-------------------------------------------------------------------------------",
 			"",
 			"' Private Backing Store",
