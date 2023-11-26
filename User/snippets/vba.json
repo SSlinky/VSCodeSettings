@@ -264,8 +264,8 @@
 		"prefix": "test",
 		"description": "Unit test basic template",
 		"body": [
-			"Private Function TestDictionary_${1:Identifier}() As TestResult",
-			"Attribute TestDictionary_$1.VB_Description = \"${2:Dosctring}.\"",
+			"Private Function TestList_${1:Identifier}() As TestResult",
+			"Attribute TestList_$1.VB_Description = \"${2:Dosctring}.\"",
 			"'   $2.",
 			"    Dim tr As New TestResult",
 			"",
@@ -279,7 +279,7 @@
 			"",
 			"",
 			"Finally:",
-			"    Set TestDictionary_$1 = tr",
+			"    Set TestList_$1 = tr",
 			"End Function"
 		]
 	}
