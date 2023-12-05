@@ -93,8 +93,10 @@
 			"'",
 			"'   Raises:",
 			"'",
-			"",
+			"    Dim result As $4",
 			"    $0",
+			"",
+			"    $2 = result",
 			"End Function"
 		]
 	},
