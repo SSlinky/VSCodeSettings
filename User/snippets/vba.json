@@ -12,190 +12,6 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Public Property Let": {
-		"prefix": "proplet",
-		"description": "Property let and get with backing store",
-		"body": [
-			"Private m${1:PropertyName} As ${2:PropertyType}",
-			"Public Property Let $1(var As $2)",
-			"Attribute $1.VB_Description = \"${3:Dosctring}.\"",
-			"'   $3.",
-			"    m$1 = var",
-			"End Property",
-			"",
-			"Public Property Get $1() As $2",
-			"    $1 = m$1",
-			"End Property",
-			"",
-			"$0"
-		]
-	},
-	"Public Property Set": {
-		"prefix": "propset",
-		"description": "Property set and get with backing store",
-		"body": [
-			"Private m${1:PropertyName} As ${2:PropertyType}",
-			"Public Property Set $1(var As $2)",
-			"Attribute $1.VB_Description = \"${3:Dosctring}.\"",
-			"'   $3.",
-			"    Set m$1 = var",
-			"End Property",
-			"",
-			"Public Property Get $1() As $2",
-			"    Set $1 = m$1",
-			"End Property",
-			"",
-			"$0"
-		]
-	},
-	"Public Property Get": {
-		"prefix": "propget",
-		"description": "Property get only",
-		"body": [
-			"Public Property Get ${1:PropertyName}() As ${2:PropertyType}",
-			"Attribute $1.VB_Description = \"${3:Dosctring}.\"",
-			"'   $3.",
-			"    $0",
-			"End Property",
-			"",
-		]
-	},
-	"Subroutine": {
-		"prefix": "sub",
-		"description": "Subroutine",
-		"body": [
-			"${1:Public }Sub ${2:Identifier}($3)",
-			"Attribute $2.VB_Description = \"${4:Dosctring}.\"",
-			"'   $4.",
-			"'",
-			"'   Args:",
-			"'       param1:",
-			"'",
-			"'   Raises:",
-			"'",
-			"",
-			"    $0",
-			"End Sub"
-		]
-	},
-	"Function": {
-		"prefix": "func",
-		"description": "Function",
-		"body": [
-			"${1:Public }Function ${2:Identifier}($3) As $4",
-			"Attribute $2.VB_Description = \"${5:Dosctring}.\"",
-			"'   $5.",
-			"'",
-			"'   Args:",
-			"'       param1:",
-			"'",
-			"'   Returns:",
-			"'",
-			"'   Raises:",
-			"'",
-			"    Dim result As $4",
-			"    $0",
-			"",
-			"    $2 = result",
-			"End Function"
-		]
-	},
-	"EnumExcl": {
-		"prefix": "enumexcl",
-		"description": "Exclusive Enum",
-		"body": [
-			"Public Enum ${1:Identifier}",
-			"    ${2:Enum1}",
-			"    ${3:Enum2}",
-			"    ${4:Enum3}",
-			"End Enum"
-		]
-	},
-	"EnumIncl": {
-		"prefix": "enumincl",
-		"description": "Inclusive Enum",
-		"body": [
-			"Public Enum ${1:Identifier}",
-			"    ${2:Enum1} = 2 ^^ 1",
-			"    ${3:Enum2} = 2 ^^ 2",
-			"    ${4:Enum3} = 2 ^^ 3",
-			"End Enum"
-		]
-	},
-	"ForLoop": {
-		"prefix": "fori",
-		"description": "For Loop",
-		"body": [
-			"${4:Dim $1 As Long}",
-			"For ${1:i} = ${2:low} To ${3:high}",
-			"    $0",
-			"Next $1"
-		]
-	},
-	"ForEachLoop": {
-		"prefix": "foreach",
-		"description": "For Each Loop",
-		"body": [
-			"For Each ${1:object} In ${2:collection}",
-			"    $0",
-			"Next $1"
-		]
-	},
-	"If": {
-		"prefix": "ifblock",
-		"description": "If Block",
-		"body": [
-			"If ${1:condition} Then",
-			"    $0",
-			"End If"
-		]
-	},
-	"IfElse": {
-		"prefix": "ifelse",
-		"description": "If Else Block",
-		"body": [
-			"If ${1:condition} Then",
-			"    $0",
-			"Else",
-			"End If"
-		]
-	},
-	"Case": {
-		"prefix": "case",
-		"description": "Select Case",
-		"body": [
-			"Select Case $1",
-			"    Case Is = $2:",
-			"        $0",
-			"    Case Else:",
-			"End Select"
-		]
-	},
-	"Event": {
-		"prefix": "event",
-		"description": "Event",
-		"body": [
-			"Public Event ${1:Identifier}($3)"
-		]
-	},
-	"Constructor": {
-		"prefix": "ctor",
-		"description": "Class_Initialize",
-		"body": [
-			"Private Sub Class_Initialize()",
-			"    $0",
-			"End Sub"
-		]
-	},
-	"Destructor": {
-		"prefix": "dtor",
-		"description": "Class_Terminate",
-		"body": [
-			"Private Sub Class_Terminate()",
-			"    $0",
-			"End Sub"
-		]
-	},
 	"Base Class Template": {
 		"prefix": "class",
 		"description": "Basic class",
@@ -210,7 +26,7 @@
 			"Attribute VB_Creatable = False",
 			"Attribute VB_PredeclaredId = False",
 			"Attribute VB_Exposed = False",
-			"' Copyright 2024 Sam Vanderslink",
+			"' Copyright 2025 Sam Vanderslink",
 			"' ",
 			"' Permission is hereby granted, free of charge, to any person obtaining a copy ",
 			"' of this software and associated documentation files (the \"Software\"), to deal ",
@@ -275,12 +91,12 @@
 			"",
 		]
 	},
-	"Base Module Template": {
+	"Personal Module Template": {
 		"prefix": "module",
 		"description": "Basic module",
 		"body": [
 			"Attribute VB_Name = \"${1:ModuleName}\"",
-			"' Copyright 2024 Sam Vanderslink",
+			"' Copyright 2025 Sam Vanderslink",
 			"' ",
 			"' Permission is hereby granted, free of charge, to any person obtaining a copy ",
 			"' of this software and associated documentation files (the \"Software\"), to deal ",
@@ -308,9 +124,9 @@
 		"prefix": "test",
 		"description": "Unit test basic template",
 		"body": [
-			"Private Function TestList_${1:Identifier}() As TestResult",
-			"Attribute TestList_$1.VB_Description = \"${2:Dosctring}.\"",
-			"'   $2.",
+			"Private Function Test${1:Class}_${2:Identifier}() As TestResult",
+			"Attribute Test$1_$2.VB_Description = \"${3:Dosctring}.\"",
+			"'   $3.",
 			"    Dim tr As New TestResult",
 			"",
 			"'   Arrange",
@@ -323,7 +139,7 @@
 			"",
 			"",
 			"Finally:",
-			"    Set TestList_$1 = tr",
+			"    Set Test$1_$2 = tr",
 			"End Function"
 		]
 	}
